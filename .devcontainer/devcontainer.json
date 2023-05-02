@@ -1,0 +1,23 @@
+{
+  "name": "Laravel",
+  "dockerComposeFile": ["../docker-compose.yml"], //ymlファイル指定
+  "service": "app",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "bash"
+    },
+    "extensions": [
+      "mikestead.dotenv",
+      "felixfbecker.php-debug",
+      "neilbrayfield.php-docblocker",
+      "bmewburn.vscode-intelephense-client",
+      "onecentlin.laravel5-snippets",
+      "onecentlin.laravel-blade",
+      "ryannaddy.laravel-artisan",
+      "mhutchie.git-graph",
+      "editorconfig.editorconfig",
+      "xdebug.php-debug"
+    ]
+  }
+}

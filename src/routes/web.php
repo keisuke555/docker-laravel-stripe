@@ -24,6 +24,8 @@ Route::get('/business', 'StripeController@business')->name('stripe.business');
 Route::get('/subscribe', function () {
     return view('subscribe');
 })->name('subscribe');
+
+Route::get('/getcustomer', 'StripeController@getCustomer')->name('getcustomer');
 Route::post('/register', 'StripeController@register')->name('register');
 
 Route::get('/success', function () {

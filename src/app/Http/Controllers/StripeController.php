@@ -115,4 +115,24 @@ class StripeController extends Controller
         
         return view('success');
     }
+
+    // 顧客情報取得
+    public function getCustomer (Request $request) 
+    {
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
+
+        $customer = \Stripe\Customer::retrieve(
+          'cus_O3TvFtCTQxfxDo', // 該当ユーザーの顧客IDを指定
+          []
+        );
+        Log::debug($customer);
+
+        $payment_methods = \Stripe\PaymentMethod::retrieve(
+            'pm_1NHMxWB6EqB6DNSAuKvGV3cA', // 取得した顧客オブジェクトからpaymentMethodIDを取り出して指定
+            []
+        );
+        Log::debug($payment_methods);
+        
+        return view('success');
+    }
 }

@@ -89,6 +89,7 @@
                     <a href="{{ route('stripe.right') }}">right</a>
                     <a href="{{ route('stripe.business') }}">business</a>
                     <a href="{{ route('subscribe') }}">subscribe</a>
+                    <a href="{{ route('getcustomer') }}">get customer</a>
                 </div>
             </div>
         </div>
